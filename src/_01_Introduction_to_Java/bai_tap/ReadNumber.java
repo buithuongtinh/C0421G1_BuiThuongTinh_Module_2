@@ -2,7 +2,7 @@ package _01_Introduction_to_Java.bai_tap;
 
 import java.util.Scanner;
 
-public class doc_so_thanh_chu {
+public class ReadNumber {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -11,47 +11,15 @@ public class doc_so_thanh_chu {
 
         int hangTram = so / 100;
         int hangChuc = (so - hangTram * 100) / 10;
-        int hangDonVi = (so -hangTram * 100 - hangChuc * 10 );
+        int hangDonVi = so -hangTram * 100 - hangChuc * 10 ;
 
-        if (so > 9 && so < 20){
-            switch (so){
-                case 10:
-                    System.out.println("ten");
-                    break;
-                case 11:
-                    System.out.println("eleven");
-                    break;
-                case 12:
-                    System.out.println("twelve");
-                    break;
-                case 13:
-                    System.out.println("thirteen");
-                    break;
-                case 14:
-                    System.out.println("fourteen");
-                    break;
-                case 15:
-                    System.out.println("fifteen");
-                    break;
-                case 16:
-                    System.out.println("sixteen");
-                    break;
-                case 17:
-                    System.out.println("seventeen");
-                    break;
-                case 18:
-                    System.out.println("eighteen");
-                    break;
-                case 19:
-                    System.out.println("nineteen");
-                    break;
-            }
-        }else if ( so < 0 || so > 999){
+        if ( so < 0 || so > 999){
             System.out.println("số bạn nhập sai");
         }else {
             if (hangChuc == 1){
                 hangTram(hangTram);
                 hangChuc(hangChuc,hangDonVi);
+
             }else {
                 hangTram(hangTram);
                 hangChuc(hangChuc,hangDonVi);
@@ -92,12 +60,10 @@ public class doc_so_thanh_chu {
         }
 
     }
+
     public static void hangChuc(int chuc,int donVi ){
         if (chuc == 1){
-            switch (chuc * 10 + donVi){
-                case 10:
-                    System.out.println("ten");
-                    break;
+            switch (10 + donVi){
                 case 11:
                     System.out.println("eleven");
                     break;
@@ -125,6 +91,36 @@ public class doc_so_thanh_chu {
                 case 19:
                     System.out.println("nineteen");
                     break;
+            }
+
+
+        }else {
+            switch (chuc ){
+                case 2:
+                    System.out.println("twenty");
+                    break;
+                case 3:
+                    System.out.println("thirty");
+                    break;
+                case 4:
+                    System.out.println("forty");
+                    break;
+                case 5:
+                    System.out.println("fifty");
+                    break;
+                case 6:
+                    System.out.println("sixty");
+                    break;
+                case 7:
+                    System.out.println("seventy");
+                    break;
+                case 8:
+                    System.out.println("Eighty");
+                    break;
+                case 9:
+                    System.out.println("ninety");
+                    break;
+
             }
         }
     }
@@ -159,8 +155,6 @@ public class doc_so_thanh_chu {
                 break;
         }
     }
-
-
 }
 
 

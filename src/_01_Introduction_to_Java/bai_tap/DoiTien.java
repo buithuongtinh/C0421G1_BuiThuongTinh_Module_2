@@ -1,6 +1,6 @@
 package _01_Introduction_to_Java.bai_tap;
 import java.util.Scanner;
-public class doi_tien {
+public class DoiTien {
     public static void main(String[] args) {
         double usd ;
         Scanner scanner = new Scanner(System.in);
