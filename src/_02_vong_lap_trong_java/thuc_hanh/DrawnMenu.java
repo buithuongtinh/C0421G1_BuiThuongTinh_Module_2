@@ -9,7 +9,7 @@ public class DrawnMenu {
             System.out.println("1. Draw the triangle");
             System.out.println("2. Draw the square");
             System.out.println("3. Draw the rectangle");
-            System.out.println("0. Exit");
+            System.out.println("4. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
             switch (choice) {
@@ -37,8 +37,8 @@ public class DrawnMenu {
                     System.out.println("* * * * * *");
                     System.out.println("* * * * * *");
                     break;
-                case 0:
-                    System.exit(0);
+                case 4:
+                    System.exit(4);
                 default:
                     System.out.println("No choice!");
             }
