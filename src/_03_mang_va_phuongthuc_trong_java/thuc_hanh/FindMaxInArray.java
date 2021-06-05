@@ -22,6 +22,7 @@ public class FindMaxInArray {
         for (int j = 0; j < array.length; j++) {
             System.out.print(array[j] + "\t");
         }
+        System.out.println("\n");
         int max = array[0];
         int index = 1;
         for (int j = 0; j < array.length; j++) {
