@@ -10,6 +10,7 @@ public class TongDuongCheoMt {
         System.out.println("Nhập vào bậc của ma trận: ");
         m = scanner.nextInt();
         int a[][] = new int[m][m];
+
         System.out.println("Nhập các phần tử cho ma trận: ");
         for (int i = 0; i < m; i++){
             for (int j = 0; j <m;j++){

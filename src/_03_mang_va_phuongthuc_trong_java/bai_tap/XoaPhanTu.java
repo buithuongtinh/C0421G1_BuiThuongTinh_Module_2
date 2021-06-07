@@ -1,6 +1,6 @@
 package _03_mang_va_phuongthuc_trong_java.bai_tap;
+
 import java.util.Scanner;
-import java.util.function.DoubleToIntFunction;
 
 public class XoaPhanTu {
     public static void main(String[] args) {
