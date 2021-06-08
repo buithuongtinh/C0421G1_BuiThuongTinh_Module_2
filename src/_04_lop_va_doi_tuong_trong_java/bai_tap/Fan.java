@@ -39,7 +39,7 @@ public class Fan {
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.Color = color;
     }
 
     @Override
@@ -50,6 +50,18 @@ public class Fan {
                 ", radius=" + radius +
                 ", Color='" + Color + '\'' +
                 '}';
+    }
+    public String speed() {
+        if (this.speed == this.SLOW){
+            return "SLOW";
+        }else if (this.speed == this.MEDIUM) {
+            return "MEDIUM";
+
+        }else if (this.speed == this.FAST) {
+            return "FAST";
+        }else{
+            return "InvaLid";
+        }
     }
 
     public static void main(String[] args) {

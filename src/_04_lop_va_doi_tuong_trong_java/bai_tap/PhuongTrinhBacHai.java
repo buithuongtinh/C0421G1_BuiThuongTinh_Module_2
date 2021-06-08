@@ -21,7 +21,6 @@ public class PhuongTrinhBacHai {
         this.a = a;
         this.b = b;
         this.c = c;
-        discriminant  = (b*b) - (4 * a * c) ;
     }
     public boolean hasSolution(){
         if(discriminant>=0)
