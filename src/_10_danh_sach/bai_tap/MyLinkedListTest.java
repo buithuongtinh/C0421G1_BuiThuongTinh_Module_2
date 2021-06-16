@@ -14,7 +14,7 @@ public class MyLinkedListTest {
         System.out.println("Các phần tử có trong list là: ");
         System.out.println(list);
 
-        System.out.println("ví dụ sử dụng phương thức addFirst phan tu \"Tôi\": ");
+        System.out.println("ví dụ sử dụng phương thức addFirst phần tử \"Tôi\": ");
         //thêm vào đầu mảng
         list.addFirst("Tôi");
         System.out.println(list);
@@ -24,13 +24,13 @@ public class MyLinkedListTest {
         list.addLast("Rồi");
         System.out.println(list);
 
-        System.out.println("ví dụ sử dụng phương thức indexOf() : ");
+        System.out.println("ví dụ sử dụng phương thức indexOf() phần tử \"Rồi\" : ");
         //kiểm tra xem Ngồi có tồn tại trong list nếu có trả về chỉ số xuất hiện đầu tiên của phần tử
         System.out.println(list.indexOf("Ngồi"));
         //nếu ko thì trả về -1
         System.out.println(list.indexOf("Mệt"));
 
-        System.out.println("ví dụ sử dụng phương thức contains() : ");
+        System.out.println("ví dụ sử dụng phương thức contains() phần tử \"Tôi\" : ");
         // kiểm tra xem Tôi có tồn tại trong list hay không?
         System.out.println(list.contains("Tôi"));
         // Kết quả trả về là true nếu tìm thấy, ngược lại trả về false.

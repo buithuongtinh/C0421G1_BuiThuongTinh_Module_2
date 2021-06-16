@@ -2,66 +2,61 @@ package _08_cleanCode_Refactoring.bai_tap;
 
 public class TennisGame {
 
-    public static String getScore(String player1Name, String player2Name, int player1Score, int player2Score) {
-        String score = "";
-        int temporaryScore=0;
-        boolean isByPoint = player1Score == player2Score;
-        if (isByPoint)
-        {
-            switch (player1Score)
-            {
-                case 0:
-                    score = "Love-All";
-                    break;
-                case 1:
-                    score = "Fifteen-All";
-                    break;
-                case 2:
-                    score = "Thirty-All";
-                    break;
-                case 3:
-                    score = "Forty-All";
-                    break;
-                default:
-                    score = "Deuce";
-                    break;
+    public static String getScore(String player1Name,
+                                  String player2Name,
+                                  int player1Score,
+                                  int player2Score) {
 
-            }
-        }
-        else if (player1Score >=4 || player2Score>=4)
-        {
-            int minusResult = getMinusResult(player1Score, player2Score);
-            if (minusResult==1) score ="Advantage player1";
-            else if (minusResult ==-1) score ="Advantage player2";
-            else if (minusResult>=2) score = "Win for player1";
-            else score ="Win for player2";
-        }
-        else {
-            for (int i=1; i<3; i++) {
-                if (i==1) temporaryScore = player1Score;
-                else { score+="-"; temporaryScore = player2Score;
-                }
-                switch(temporaryScore) {
-                    case 0:
-                        score+="Love";
-                        break;
-                    case 1:
-                        score+="Fifteen";
-                        break;
-                    case 2:
-                        score+="Thirty";
-                        break;
-                    case 3:
-                        score+="Forty";
-                        break;
-                }
-            }
-        }
-        return score;
+        boolean isDraw = player1Score == player2Score;
+        boolean isEnd = player1Score >= 4 || player2Score >= 4;
+        if (isDraw) return getGameDrawCalledScore(player1Score);
+        if (isEnd) return getGameEndCalledScore(player1Score, player2Score);
+
+        String calledScore = getPlayerCalledScore(player1Score)
+                +
+                "-"
+                +
+                getPlayerCalledScore(player2Score);
+        return calledScore;
     }
 
-    public static int getMinusResult(int player1Score, int player2Score) {
-        return player1Score -player2Score;
+    private static String getGameDrawCalledScore(int drawScore) {
+        switch (drawScore) {
+            case 0:
+                return "Love-All";
+            case 1:
+                return "Fifteen-All";
+            case 2:
+                return "Thirty-All";
+            case 3:
+                return "Forty-All";
+            default:
+                return "Deuce";
+        }
+    }
+
+    private static String getGameEndCalledScore(int player1Score, int player2Score) {
+        int finalScore = player1Score - player2Score;
+        int minusResult = player1Score - player2Score;
+
+        if (minusResult == 1) return "Advantage player1";
+        if (minusResult == -1) return "Advantage player2";
+        if (minusResult >= 2) return "Win for player1";
+        return "Win for player2";
+    }
+
+    private static String getPlayerCalledScore(int playerScore) {
+        switch (playerScore) {
+            case 0:
+                return "Love";
+            case 1:
+                return "Fifteen";
+            case 2:
+                return "Thirty";
+            default:
+                return "Forty";
+        }
+
     }
 }
 

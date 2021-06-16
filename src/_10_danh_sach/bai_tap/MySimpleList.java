@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class MySimpleList<E> {
     private int size = 0;
-    private static final int DEFAULT_CAPACITY = 5;
+    private static final int DEFAULT_CAPACITY = 10;
     private E[] element;
 
     public MySimpleList() {
@@ -27,7 +27,7 @@ public class MySimpleList<E> {
         ensureCapa();
         element[size - 1] = e;
     }
-    // thêm một phần tử ở cuối danh sánh
+    // thêm một phần tử
     public boolean add(E e, int index) {
         if (index >= 0 && index <= size) {
             size += 1;
@@ -47,7 +47,7 @@ public class MySimpleList<E> {
         }
         return null;
     }
-     // hình như trả về một bản sao của arrayList hoặc ko phải
+     // hình như trả về một bản sao của arrayList
     @Override
     public MySimpleList clone() {
         MySimpleList<E> clone = new MySimpleList<>(element.length);
