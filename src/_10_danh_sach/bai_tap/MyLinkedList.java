@@ -6,7 +6,7 @@ public class MyLinkedList {
     private Node head;    //head đối tượng lớp Node
     private int numNode; //xác định số phần tử trong danh sách,mặc định gán là 0.
     private boolean flag;
-    public class Node {
+    public static class Node {
         private Node next;
         private Object data;
 
@@ -117,6 +117,32 @@ public class MyLinkedList {
             temp = temp.next;
         }
     }
+
+//    //get first index
+//    public void getFirst() {
+//        final Node f = head;
+//        return f;
+//    }
+//​
+//    //get last index
+//    public E getLast() {
+//        final Node<E> l = last;
+//        return l.item;
+//    }
+//​
+//    //Clear list
+//    public void clear() {
+//        for (Node x = head; x != null; ) {
+//            Node<E> next = x.next;
+//            x.item = null;
+//            x.next = null;
+//            x.prev = null;
+//            x = next;
+//        }
+//        head = last = null;
+//        size = 0;
+//        numNodes++;
+//    }
 
 
 }
