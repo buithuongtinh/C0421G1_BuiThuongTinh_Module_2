@@ -22,13 +22,12 @@ public class StringExample2 {
         }
     }
 
-    /**
-     * Đếm số từ của một chuỗi,
-     * giả sử các từ được ngăn cách nhau bởi một hoặc nhiều
-     * dấu 'space', tab '\t' và xuống dòng '\n'
-     * @param input - chuỗi ký tự
-     * @return số từ của chuỗi ký tự input
-     */
+    //Đếm số từ của một chuỗi,
+     //giả sử các từ được ngăn cách nhau bởi một hoặc nhiều
+    // dấu 'space', tab '\t' và xuống dòng '\n'
+     //@ input - chuỗi ký tự
+     // @return số từ của chuỗi ký tự input
+     //
     public static Map<String, Integer> countWords(String input) {
         // khởi tạo wordMap
         Map<String, Integer> wordMap = new TreeMap<String, Integer>();
@@ -53,12 +52,9 @@ public class StringExample2 {
         return wordMap;
     }
 
-    /**
-     * Thêm từ vào wordMap
-     *
-     * @param wordMap: map chứa các từ và số lần xuất hiện
-     * @param sb: từ cần thêm vào wordMap
-     */
+    // Thêm từ vào wordMap
+    // @param wordMap: map chứa các từ và số lần xuất hiện
+    // @param sb: từ cần thêm vào wordMap
     public static void addWord(Map<String, Integer> wordMap, StringBuilder sb) {
         String word = sb.toString();
         if (word.length() == 0) {
