@@ -16,8 +16,6 @@ public class CopyFileExample {
             //Cấp phát 1024 byte để chứa nội dung đọc từ file.
             byte[] buffer = new byte[1024];
             int length;
-//Phương thức đọc read() đọc số byte từ luồng input và lưu vào mảng buffer.
-// Phương thức này trả về tổng số byte đọc được, hoặc trả về -1 nếu file rỗng.
             while ((length = is.read(buffer)) > 0 ){
                 os.write(buffer, 0 , length);
             }
