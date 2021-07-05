@@ -72,11 +72,11 @@ public class TestProduct {
     }
     public static void readFile(String pathFile) {
         try {
-            FileInputStream fileInputStream = new FileInputStream(pathFile);
-            ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-            list = (List<Product>) objectInputStream.readObject();
-            objectInputStream.close();
-            fileInputStream.close();
+            FileInputStream fis = new FileInputStream(pathFile);
+            ObjectInputStream obj = new ObjectInputStream(fis);
+            list = (List<Product>) obj.readObject();
+            obj.close();
+            fis.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

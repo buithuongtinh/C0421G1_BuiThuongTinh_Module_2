@@ -12,7 +12,7 @@ public class Customer extends Person{
         this.address = address;
     }
 
-    public Customer(int id, String name, String ngaySinh, double phoneNumber, String gioiTinh, double cmnd, String email, String loaiKhach, String address) {
+    public Customer(int id, String name, String ngaySinh, String phoneNumber, String gioiTinh, String cmnd, String email, String loaiKhach, String address) {
         super(id, name, ngaySinh, phoneNumber, gioiTinh, cmnd, email);
         this.loaiKhach = loaiKhach;
         this.address = address;

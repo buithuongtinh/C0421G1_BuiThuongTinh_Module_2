@@ -4,16 +4,16 @@ public class Person {
     private int id;
     private String name;
     private String ngaySinh;
-    private double phoneNumber;
+    private String phoneNumber;
     private String gioiTinh;
-    private double cmnd ;
+    private String cmnd ;
     private String email ;
 
     public Person() {
     }
 
-    public Person(int id, String name, String ngaySinh, double phoneNumber
-            , String gioiTinh, double cmnd, String email)
+    public Person(int id, String name, String ngaySinh, String phoneNumber
+            , String gioiTinh, String cmnd, String email)
     {
         this.id = id;
         this.name = name;
@@ -48,11 +48,11 @@ public class Person {
         this.ngaySinh = ngaySinh;
     }
 
-    public double getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(double phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -64,11 +64,11 @@ public class Person {
         this.gioiTinh = gioiTinh;
     }
 
-    public double getCmnd() {
+    public String getCmnd() {
         return cmnd;
     }
 
-    public void setCmnd(double cmnd) {
+    public void setCmnd(String cmnd) {
         this.cmnd = cmnd;
     }
 
