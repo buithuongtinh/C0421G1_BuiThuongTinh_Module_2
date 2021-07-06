@@ -8,12 +8,13 @@ public class Person {
     private String gioiTinh;
     private String cmnd ;
     private String email ;
+    private String address;
 
     public Person() {
     }
 
     public Person(int id, String name, String ngaySinh, String phoneNumber
-            , String gioiTinh, String cmnd, String email)
+            , String gioiTinh, String cmnd, String email,String address)
     {
         this.id = id;
         this.name = name;
@@ -22,6 +23,15 @@ public class Person {
         this.gioiTinh = gioiTinh;
         this.cmnd = cmnd;
         this.email = email;
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public int getId() {
@@ -86,10 +96,11 @@ public class Person {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", ngaySinh='" + ngaySinh + '\'' +
-                ", phoneNumber=" + phoneNumber +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 ", gioiTinh='" + gioiTinh + '\'' +
-                ", cmnd=" + cmnd +
+                ", cmnd='" + cmnd + '\'' +
                 ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }

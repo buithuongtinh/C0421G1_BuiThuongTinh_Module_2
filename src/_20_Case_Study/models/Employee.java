@@ -5,7 +5,8 @@ public class Employee extends Person{
     private String viTri;
     private double luong;
 
-    public Employee() {
+
+    public Employee(int id, String name, String ngaySinh, String gioiTinh, String cmnd, String phoneNumber, String email, String address, String level, String viTri, double luong) {
     }
 
     public Employee(String level, String viTri, double luong) {
@@ -14,7 +15,7 @@ public class Employee extends Person{
         this.luong = luong;
     }
 
-    public Employee(int id, String name, String ngaySinh, double phoneNumber, String gioiTinh, double cmnd, String email, String level, String viTri, double luong) {
+    public Employee(int id, String name, String ngaySinh, String phoneNumber, String gioiTinh, String cmnd, String email, String level, String viTri, double luong) {
         super(id, name, ngaySinh, phoneNumber, gioiTinh, cmnd, email);
         this.level = level;
         this.viTri = viTri;

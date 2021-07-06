@@ -1,6 +1,7 @@
-package _20_Case_Study.services;
+package _20_Case_Study.services.class_services;
 
 import _20_Case_Study.models.Customer;
+import _20_Case_Study.services.CustomerService;
 import _20_Case_Study.utils.WriteAndReadFile;
 
 import java.io.File;
@@ -11,7 +12,7 @@ import java.util.Scanner;
 
 
 
-public class CustomerServiceImpl implements CustomerService{
+public class CustomerServiceImpl implements CustomerService {
     private Scanner scanner = new Scanner(System.in);
     private static List<Customer> linkedList  = new LinkedList<>();
     private static WriteAndReadFile writeAndReadFile = new WriteAndReadFile();
@@ -25,8 +26,12 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public void add() {
-        System.out.println("Nhập id Khách: ");
-        int id = scanner.nextInt();
+        int id = 0;
+        if (linkedList.isEmpty()) {
+            id = 1;
+        } else {
+            id = linkedList.get(linkedList.size() - 1).getId() + 1;
+        }
         System.out.println("Nhập tên Khách: ");
         String name = scanner.next();
         System.out.println("Nhập vào ngày tháng năm sinh:");
