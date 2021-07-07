@@ -9,9 +9,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-
-
-
 public class CustomerServiceImpl implements CustomerService {
     private Scanner scanner = new Scanner(System.in);
     private static List<Customer> linkedList  = new LinkedList<>();
@@ -190,7 +187,9 @@ public class CustomerServiceImpl implements CustomerService {
         for (Customer customer : linkedList) {
             System.out.println(customer.toString());
         }
-
-
+    }
+    @Override
+    public List<Customer> getAll() {
+        return linkedList;
     }
 }

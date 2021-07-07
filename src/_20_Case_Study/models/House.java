@@ -12,8 +12,8 @@ public class House extends Facility {
         this.soTang = soTang;
     }
 
-    public House(String tenDichVu, int dienTichUse, double chiPhiThue, int maximunPeoples, String tieuChuanPhong, int soTang) {
-        super(tenDichVu, dienTichUse, chiPhiThue, maximunPeoples);
+    public House(String tenDichVu, int dienTichUse, double chiPhiThue, int maximunPeoples, String kieuThue, String tieuChuanPhong, int soTang) {
+        super(tenDichVu, dienTichUse, chiPhiThue, maximunPeoples, kieuThue);
         this.tieuChuanPhong = tieuChuanPhong;
         this.soTang = soTang;
     }

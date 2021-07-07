@@ -260,7 +260,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                         break;
                     }
                     default: {
-                        System.out.println("bn nhập sai");
+                        System.out.println("Bạn nhập sai");
                         break;
                     }
 

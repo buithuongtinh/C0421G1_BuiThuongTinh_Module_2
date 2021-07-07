@@ -14,8 +14,8 @@ public class Villa extends Facility{
         this.soTang = soTang;
     }
 
-    public Villa(String tenDichVu, int dienTichUse, double chiPhiThue, int maximunPeoples, String tieuChuanPhong, double dienTichPool, int soTang) {
-        super(tenDichVu, dienTichUse, chiPhiThue, maximunPeoples);
+    public Villa(String tenDichVu, int dienTichUse, double chiPhiThue, int maximunPeoples, String kieuThue, String tieuChuanPhong, double dienTichPool, int soTang) {
+        super(tenDichVu, dienTichUse, chiPhiThue, maximunPeoples, kieuThue);
         this.tieuChuanPhong = tieuChuanPhong;
         this.dienTichPool = dienTichPool;
         this.soTang = soTang;

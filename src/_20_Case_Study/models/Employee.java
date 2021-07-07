@@ -1,22 +1,21 @@
 package _20_Case_Study.models;
 
-public class Employee extends Person{
-    private String level ;
+public class Employee extends Person {
+    private String level;
     private String viTri;
     private double luong;
 
-
-    public Employee(int id, String name, String ngaySinh, String gioiTinh, String cmnd, String phoneNumber, String email, String address, String level, String viTri, double luong) {
+    public Employee() {
     }
 
-    public Employee(String level, String viTri, double luong) {
+    public Employee(int id, String name, String ngaySinh, String phoneNumber, String gioiTinh, String cmnd, String email, String address, String level, String viTri, double luong) {
+        super(id, name, ngaySinh, phoneNumber, gioiTinh, cmnd, email, address);
         this.level = level;
         this.viTri = viTri;
         this.luong = luong;
     }
 
-    public Employee(int id, String name, String ngaySinh, String phoneNumber, String gioiTinh, String cmnd, String email, String level, String viTri, double luong) {
-        super(id, name, ngaySinh, phoneNumber, gioiTinh, cmnd, email);
+    public Employee(String level, String viTri, double luong) {
         this.level = level;
         this.viTri = viTri;
         this.luong = luong;
