@@ -2,7 +2,7 @@ package _20_Case_Study.services.class_services;
 
 import _20_Case_Study.models.Customer;
 import _20_Case_Study.services.CustomerService;
-import _20_Case_Study.utils.WriteAndReadFile;
+import _20_Case_Study.common.WriteAndReadFile;
 
 import java.io.File;
 import java.util.LinkedList;

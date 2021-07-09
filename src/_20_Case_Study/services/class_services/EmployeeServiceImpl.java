@@ -2,7 +2,7 @@ package _20_Case_Study.services.class_services;
 
 import _20_Case_Study.models.Employee;
 import _20_Case_Study.services.EmployeeService;
-import _20_Case_Study.utils.WriteAndReadFile;
+import _20_Case_Study.common.WriteAndReadFile;
 
 import java.util.ArrayList;
 import java.util.List;

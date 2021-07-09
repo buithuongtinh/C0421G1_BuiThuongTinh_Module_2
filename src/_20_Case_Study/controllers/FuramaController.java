@@ -8,7 +8,7 @@ public class FuramaController {
         System.out.println("choose 1 = Employee Management");
         System.out.println("choose 2 = Customer Management");
         System.out.println("choose 3 = Facility Management");
-        System.out.println("choose 4 = Booking Managerment");
+        System.out.println("choose 4 = Booking Management");
         System.out.println("choose 5 = Promotion Management");
         System.out.println("choose 6 = exit");
         int choice = scanner.nextInt();
@@ -30,7 +30,7 @@ public class FuramaController {
                     break;
                 }
                 case 4:{
-                    System.out.println("Booking Managerment");
+                    System.out.println("Booking Management");
                     BookingManagerment.BookingManagerment();
                     break;
                 }

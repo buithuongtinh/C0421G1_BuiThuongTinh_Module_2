@@ -1,9 +1,9 @@
 package _20_Case_Study.models;
 
 public class Booking {
-    private int idBooking ;
-    private double startDay;
-    private double endDay;
+    private int idBooking;
+    private String startDay;
+    private String endDay;
     private int idCustomer;
     private String tenDichVu;
     private String loaiDichVu;
@@ -11,7 +11,7 @@ public class Booking {
     public Booking() {
     }
 
-    public Booking(int idBooking, double startDay, double endDay, int idCustomer, String tenDichVu, String loaiDichVu) {
+    public Booking(int idBooking, String startDay, String endDay, int idCustomer, String tenDichVu, String loaiDichVu) {
         this.idBooking = idBooking;
         this.startDay = startDay;
         this.endDay = endDay;
@@ -28,19 +28,19 @@ public class Booking {
         this.idBooking = idBooking;
     }
 
-    public double getStartDay() {
+    public String getStartDay() {
         return startDay;
     }
 
-    public void setStartDay(double startDay) {
+    public void setStartDay(String startDay) {
         this.startDay = startDay;
     }
 
-    public double getEndDay() {
+    public String getEndDay() {
         return endDay;
     }
 
-    public void setEndDay(double endDay) {
+    public void setEndDay(String endDay) {
         this.endDay = endDay;
     }
 
@@ -72,8 +72,8 @@ public class Booking {
     public String toString() {
         return "Booking{" +
                 "idBooking=" + idBooking +
-                ", startDay=" + startDay +
-                ", endDay=" + endDay +
+                ", startDay='" + startDay + '\'' +
+                ", endDay='" + endDay + '\'' +
                 ", idCustomer=" + idCustomer +
                 ", tenDichVu='" + tenDichVu + '\'' +
                 ", loaiDichVu='" + loaiDichVu + '\'' +

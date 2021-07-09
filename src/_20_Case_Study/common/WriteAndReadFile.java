@@ -1,24 +1,23 @@
-package _20_Case_Study.utils;
+package _20_Case_Study.common;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
-public class WriteAndReadFacility<T,E> {
-    public  void Write(String pathFile, Map<T,E> map) {
+public class WriteAndReadFile<T>{
+    public  void Write(String pathFile, List<T> list) {
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
 
         try {
             fileOutputStream = new FileOutputStream(pathFile);
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
-            objectOutputStream.writeObject(map);
+            objectOutputStream.writeObject(list);
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
             try {
+                assert objectOutputStream != null;
                 objectOutputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -31,22 +30,20 @@ public class WriteAndReadFacility<T,E> {
         }
     }
 
-    public Map<T,E> Read(String pathfile) {
-        Map<T,E> list = new LinkedHashMap<>();
+
+    public List<T> Read(String pathfile) {
+        List<T> list = new ArrayList<>();
         FileInputStream fileInputStream = null;
         ObjectInputStream objectInputStream = null;
         try {
             fileInputStream = new FileInputStream(pathfile);
             objectInputStream = new ObjectInputStream(fileInputStream);
-            list = (Map<T,E>) objectInputStream.readObject();
-        } catch (FileNotFoundException e) {
+            list = (List<T>) objectInputStream.readObject();
+        } catch (ClassNotFoundException | IOException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        }finally {
+        } finally {
             try {
+                assert objectInputStream != null;
                 objectInputStream.close();
             } catch (IOException e) {
                 e.printStackTrace();

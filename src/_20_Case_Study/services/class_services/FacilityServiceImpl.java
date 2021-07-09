@@ -6,7 +6,7 @@ import _20_Case_Study.models.House;
 import _20_Case_Study.models.Room;
 import _20_Case_Study.models.Villa;
 import _20_Case_Study.services.FacilityService;
-import _20_Case_Study.utils.WriteAndReadFacility;
+import _20_Case_Study.common.WriteAndReadFacility;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
