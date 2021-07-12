@@ -25,6 +25,7 @@ public class FacilityServiceImpl implements FacilityService {
     private static final String VillaPath = "src\\_20_Case_Study\\data\\villa.csv";
     private static final String HousePath = "src\\_20_Case_Study\\data\\house.csv";
     private static final String RoomPath = "src\\_20_Case_Study\\data\\room.csv";
+    private static final String FacilityPath ="src\\_20_Case_Study\\data\\facility.csv";
     private static WriteAndReadFacility writeAndRead = new WriteAndReadFacility();
     private static FacilityManagement facilityManagement = new FacilityManagement();
 
@@ -40,6 +41,26 @@ public class FacilityServiceImpl implements FacilityService {
 
     @Override
     public void add() {
+        System.out.println("Chọn 1 : addVilla");
+        System.out.println("Chọn 2 : addRoom");
+        System.out.println("Chọn 3 : addhouse");
+        int choice = scanner.nextInt();
+
+        switch(choice) {
+            case 1:{
+                addNewVilla();
+                break;
+            }
+            case 2:{
+                addNewRoom();
+                break;
+            }
+            case 3:{
+                addNewHouse();
+                break;
+            }
+
+        }
 
     }
 
@@ -68,32 +89,35 @@ public class FacilityServiceImpl implements FacilityService {
 
     @Override
     public void addNewVilla() {
-        System.out.println("nhập vào name ");
+        System.out.println("Nhập vào tên Villa ");
         String name = scanner.next();
 
-        System.out.println("nhập vào diện tích");
+        System.out.println("Nhập vào diện tích của villa ");
         int area = scanner.nextInt();
 
-        System.out.println("nhập vào số tiền");
+        System.out.println("Nhập vào số tiền");
         int moneyRend = scanner.nextInt();
 
-        System.out.println("nhập vào số lượng người ở");
+        System.out.println("Nhập vào số lượng người ở");
         int maxPeople = scanner.nextInt();
 
-        System.out.println("nhập vào loại cho thuê");
+        System.out.println("Nhập vào loại cho thuê");
+
         String rentalType = scanner.next();
 
-        System.out.println("nhập vào phòng tiêu chuẩn");
+        System.out.println("Nhập vào phòng tiêu chuẩn");
         String roomStandard = scanner.next();
 
-        System.out.println("nhập vào diện tích hồ bơi");
+        System.out.println("Nhập vào diện tích hồ bơi");
         int arePool = scanner.nextInt();
 
-        System.out.println("nhập vào số tầng");
+        System.out.println("Nhập vào số tầng");
         int numberOfFloor = scanner.nextInt();
 
         facilityVilla.put(new Villa(name, area, moneyRend, maxPeople, rentalType, roomStandard, arePool, numberOfFloor), 1);
         writeAndRead.Write(VillaPath,facilityVilla);
+        facility.putAll(facilityVilla);
+        writeAndRead.Write(FacilityPath,facility);
 
     }
 
@@ -123,6 +147,9 @@ public class FacilityServiceImpl implements FacilityService {
 
         facilityHouse.put(new House(name, area, moneyRend, maxPeople, rentalType, roomStandard, numberOfFloor), 1);
         writeAndRead.Write(HousePath, facilityHouse);
+        facility.putAll(facilityHouse);
+        writeAndRead.Write(FacilityPath,facility);
+
 
     }
 
@@ -149,6 +176,8 @@ public class FacilityServiceImpl implements FacilityService {
 
         facilityRoom.put(new Room(name, area, moneyRend, maxPeople, rentalType, serviceFree), 1);
         writeAndRead.Write(RoomPath, facilityRoom);
+        facility.putAll(facilityRoom);
+        writeAndRead.Write(FacilityPath,facility);
     }
 
 

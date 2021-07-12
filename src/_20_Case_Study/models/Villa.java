@@ -1,6 +1,8 @@
 package _20_Case_Study.models;
 
-public class Villa extends Facility{
+import java.io.Serializable;
+
+public class Villa extends Facility implements Serializable {
     private String tieuChuanPhong;
     private double dienTichPool ;
     private int soTang ;
@@ -52,6 +54,7 @@ public class Villa extends Facility{
                 "tieuChuanPhong='" + tieuChuanPhong + '\'' +
                 ", dienTichPool=" + dienTichPool +
                 ", soTang=" + soTang +
+                super.toString() +
                 '}';
     }
 }

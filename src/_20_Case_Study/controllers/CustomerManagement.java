@@ -9,10 +9,10 @@ public class CustomerManagement {
     public static void CustomerManagement() {
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 = Display list customers ");
-        System.out.println("2 = Add new customer ");
-        System.out.println("3 = Edit customer ");
-        System.out.println("4 = Return main menu ");
+        System.out.println("1: Display list customers ");
+        System.out.println("2: Add new customer ");
+        System.out.println("3: Edit customer ");
+        System.out.println("4: Return main menu ");
         int input = scanner.nextInt();
         switch (input){
             case 1:{

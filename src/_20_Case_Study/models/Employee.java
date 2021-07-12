@@ -51,6 +51,7 @@ public class Employee extends Person {
                 "level='" + level + '\'' +
                 ", viTri='" + viTri + '\'' +
                 ", luong=" + luong +
+                super.toString() +
                 '}';
     }
 }

@@ -8,7 +8,6 @@ public class WriteAndReadFacility<T,E> {
     public  void Write(String pathFile, Map<T,E> map) {
         FileOutputStream fileOutputStream = null;
         ObjectOutputStream objectOutputStream = null;
-
         try {
             fileOutputStream = new FileOutputStream(pathFile);
             objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -28,15 +27,14 @@ public class WriteAndReadFacility<T,E> {
             }
         }
     }
-
-    public Map<T,E> Read(String pathfile) {
-        Map<T,E> list = new LinkedHashMap<>();
+    public Map<T,E> Read(String pathfile){
+        Map<T,E> map = new LinkedHashMap<>();
         FileInputStream fileInputStream = null;
         ObjectInputStream objectInputStream = null;
         try {
             fileInputStream = new FileInputStream(pathfile);
             objectInputStream = new ObjectInputStream(fileInputStream);
-            list = (Map<T,E>) objectInputStream.readObject();
+            map = (Map<T,E>) objectInputStream.readObject();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -55,6 +53,6 @@ public class WriteAndReadFacility<T,E> {
                 e.printStackTrace();
             }
         }
-        return list;
+        return map;
     }
 }

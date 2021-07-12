@@ -2,20 +2,18 @@ package _20_Case_Study.models;
 
 public class Customer extends Person{
     private String loaiKhach ;
-    private String address;
+
 
     public Customer() {
     }
 
-    public Customer(String loaiKhach, String address) {
+    public Customer(String loaiKhach) {
         this.loaiKhach = loaiKhach;
-        this.address = address;
     }
 
-    public Customer(int id, String name, String ngaySinh, String phoneNumber, String gioiTinh, String cmnd, String email, String loaiKhach, String address) {
-        super(id, name, ngaySinh, phoneNumber, gioiTinh, cmnd, email);
+    public Customer(int id, String name, String ngaySinh, String phoneNumber, String gioiTinh, String cmnd, String email, String address, String loaiKhach) {
+        super(id, name, ngaySinh, phoneNumber, gioiTinh, cmnd, email, address);
         this.loaiKhach = loaiKhach;
-        this.address = address;
     }
 
     public String getLoaiKhach() {
@@ -26,19 +24,12 @@ public class Customer extends Person{
         this.loaiKhach = loaiKhach;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     @Override
     public String toString() {
         return "Customer{" +
                 "loaiKhach='" + loaiKhach + '\'' +
-                ", address='" + address + '\'' +
+                super.toString() +
                 '}';
     }
 }

@@ -1,6 +1,8 @@
 package _20_Case_Study.models;
 
-public class Room extends Facility{
+import java.io.Serializable;
+
+public class Room extends Facility implements Serializable {
     private String freeservice ;
 
     public Room() {
@@ -27,6 +29,7 @@ public class Room extends Facility{
     public String toString() {
         return "Room{" +
                 "freeservice='" + freeservice + '\'' +
+                super.toString() +
                 '}';
     }
 }

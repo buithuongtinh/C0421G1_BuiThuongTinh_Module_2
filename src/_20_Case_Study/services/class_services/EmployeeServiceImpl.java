@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class EmployeeServiceImpl implements EmployeeService {
     private static Scanner scanner = new Scanner(System.in);
     private static List<Employee> listEmploy  = new ArrayList<>();
-    private static WriteAndReadFile writeAndReadFile = new WriteAndReadFile();
+    private static WriteAndReadFile<Employee> writeAndReadFile = new WriteAndReadFile<Employee>();
     private static final String filePath = "src\\_20_Case_Study\\data\\employee.csv";
 
 
@@ -42,10 +42,10 @@ public class EmployeeServiceImpl implements EmployeeService {
         String address = scanner.next();
 
         System.out.println("Chọn Trình độ nhân viên ? ");
-        System.out.println("1 = Trung cấp");
-        System.out.println("2 = Cao đẳng");
-        System.out.println("3 = Đại Học");
-        System.out.println("4 = Sau đại học");
+        System.out.println("1: Trung cấp");
+        System.out.println("2: Cao đẳng");
+        System.out.println("3: Đại Học");
+        System.out.println("4: Sau đại học");
         String level = scanner.next();
         switch (level) {
             case "1": {
@@ -78,12 +78,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
         System.out.println("Chọn Vị Trí nhân viên ? ");
-        System.out.println("1 = Lễ tân");
-        System.out.println("2 = Phục Vụ");
-        System.out.println("3 = Chuyên Viên");
-        System.out.println("4 = Giám sát");
-        System.out.println("5 = Quản Lý");
-        System.out.println("6 = Giám Đốc");
+        System.out.println("1: Lễ tân");
+        System.out.println("2: Phục Vụ");
+        System.out.println("3: Chuyên Viên");
+        System.out.println("4: Giám sát");
+        System.out.println("5: Quản Lý");
+        System.out.println("6: Giám Đốc");
         String viTri = scanner.next();
         switch (viTri) {
             case "1": {
@@ -177,10 +177,10 @@ public class EmployeeServiceImpl implements EmployeeService {
                 listEmploy.get(i).setAddress(inputAddress);
 
                 System.out.println("nhập vào trình độ");
-                System.out.println("1 = Trung cấp");
-                System.out.println("2 = Cao Đẳng");
-                System.out.println("3 = Đại học");
-                System.out.println("4 = sau Đại học");
+                System.out.println("1: Trung cấp");
+                System.out.println("2: Cao Đẳng");
+                System.out.println("3: Đại học");
+                System.out.println("4: sau Đại học");
                 String Level = scanner.next();
                 switch (Level) {
                     case "1": {
@@ -215,12 +215,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
                 System.out.println("nhập vào vị trí");
-                System.out.println("1 = lễ tân");
-                System.out.println("2 = phục vụ");
-                System.out.println("3 = chuyên viên");
-                System.out.println("4 = Giám sát");
-                System.out.println("5 = quản lí");
-                System.out.println("6 = giám đốc");
+                System.out.println("1: lễ tân");
+                System.out.println("2: phục vụ");
+                System.out.println("3: chuyên viên");
+                System.out.println("4: Giám sát");
+                System.out.println("5: quản lí");
+                System.out.println("6: giám đốc");
                 String vitri = scanner.next();
                 switch (vitri) {
                     case "1": {
@@ -283,6 +283,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void display() {
+
+        listEmploy = writeAndReadFile.Read(filePath);
+        for (Employee lists : listEmploy) {
+            System.out.println(lists.toString());
+        }
+
 
     }
 }

@@ -5,12 +5,14 @@ import java.util.Scanner;
 public class FuramaController {
     public static void displayMainMenu(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("choose 1 = Employee Management");
-        System.out.println("choose 2 = Customer Management");
-        System.out.println("choose 3 = Facility Management");
-        System.out.println("choose 4 = Booking Management");
-        System.out.println("choose 5 = Promotion Management");
-        System.out.println("choose 6 = exit");
+        System.out.println("--------------Main Menu---------------");
+        System.out.println("<1> Employee Management");
+        System.out.println("<2> Customer Management");
+        System.out.println("<3> Facility Management");
+        System.out.println("<4> Booking Management");
+        System.out.println("<5> Promotion Management");
+        System.out.println("<6> exit");
+        System.out.println("Enter your choice: ");
         int choice = scanner.nextInt();
         while (true){
             switch (choice){

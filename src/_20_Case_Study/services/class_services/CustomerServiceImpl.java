@@ -13,7 +13,7 @@ public class CustomerServiceImpl implements CustomerService {
     private Scanner scanner = new Scanner(System.in);
     private static List<Customer> linkedList  = new LinkedList<>();
     private static WriteAndReadFile writeAndReadFile = new WriteAndReadFile();
-    private static final String filePath = "src\\_20_Case_Study\\data\\customer.txt";
+    private static final String filePath = "src\\_20_Case_Study\\data\\customer.csv";
     private static File file = new File(filePath);
 
 
@@ -44,11 +44,11 @@ public class CustomerServiceImpl implements CustomerService {
         System.out.println("Nhập vào địa chỉ:");
         String address = scanner.next();
         System.out.println("Khách hàng thuộc loại gì ? ");
-        System.out.println("1 = Diamond");
-        System.out.println("2 = Platinium");
-        System.out.println("3 = Gold");
-        System.out.println("4 = Silver ");
-        System.out.println("5 = Member");
+        System.out.println("1: Diamond");
+        System.out.println("2: Platinium");
+        System.out.println("3: Gold");
+        System.out.println("4: Silver ");
+        System.out.println("5: Member");
         String loaiKhach = scanner.next();
         switch (loaiKhach) {
             case "1": {
@@ -84,7 +84,7 @@ public class CustomerServiceImpl implements CustomerService {
             }
         }
 
-        linkedList.add(new Customer(id,name,ngaySinh,phoneNumber,gioiTinh,cmnd,email,address,loaiKhach));
+        linkedList.add(new Customer(id,name,ngaySinh,phoneNumber,gioiTinh,cmnd,email, address,loaiKhach));
         writeAndReadFile.Write(filePath,linkedList);
 
     }
@@ -130,11 +130,11 @@ public class CustomerServiceImpl implements CustomerService {
                 linkedList.get(i).setAddress(address);
 
                 System.out.println("loại kháck");
-                System.out.println("1 = Diamond");
-                System.out.println("2 = Platinium");
-                System.out.println("3 = Gold");
-                System.out.println("4 = Silver ");
-                System.out.println("5 = Member");
+                System.out.println("1: Diamond");
+                System.out.println("2: Platinium");
+                System.out.println("3: Gold");
+                System.out.println("4: Silver ");
+                System.out.println("5: Member");
                 String loaiKhach = scanner.next();
 
 

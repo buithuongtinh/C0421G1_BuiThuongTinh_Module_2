@@ -8,10 +8,10 @@ public class EmployeeManagement {
     private  static EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
     public static void EmployeeManagement(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("1 = Display list employees ");
-        System.out.println("2 = Add new employee ");
-        System.out.println("3 = Edit employee ");
-        System.out.println("4 = Return main menu ");
+        System.out.println("1: Display list employees ");
+        System.out.println("2: Add new employee ");
+        System.out.println("3: Edit employee ");
+        System.out.println("4: Return main menu ");
         int input = scanner.nextInt();
         boolean check = true;
         switch (input){

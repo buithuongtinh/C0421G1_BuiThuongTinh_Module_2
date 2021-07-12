@@ -1,6 +1,8 @@
 package _20_Case_Study.models;
 
-public abstract class Facility {
+import java.io.Serializable;
+
+public abstract class Facility implements Serializable {
     private String tenDichVu;
     private int dienTichUse;
     private double chiPhiThue;
@@ -57,6 +59,7 @@ public abstract class Facility {
     public void setKieuThue(String kieuThue) {
         this.kieuThue = kieuThue;
     }
+
 
     @Override
     public String toString() {

@@ -1,6 +1,8 @@
 package _20_Case_Study.models;
 
-public class House extends Facility {
+import java.io.Serializable;
+
+public class House extends Facility implements Serializable {
     private String tieuChuanPhong;
     private int soTang ;
 
@@ -39,6 +41,7 @@ public class House extends Facility {
         return "House{" +
                 "tieuChuanPhong='" + tieuChuanPhong + '\'' +
                 ", soTang=" + soTang +
+                super.toString() +
                 '}';
     }
 }
